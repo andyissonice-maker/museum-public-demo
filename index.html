@@ -40,7 +40,7 @@
   font: 16px/1.5 system-ui, sans-serif;
 }
 </style>
-    <script data-assistant-url="https://museum-ssistant-ybdmlpgloi.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}'>(() => {
+    <script data-assistant-url="https://museum-t-stream-jjqkxxwwrh.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}'>(() => {
   const assistantUrl = document.currentScript?.dataset.assistantUrl;
   document.documentElement.dataset.museumPublicDemo = 'true';
   const user = {
@@ -270,6 +270,7 @@
         signal: init?.signal,
         body: JSON.stringify({
           message: body?.message,
+          stream: body?.stream === true,
           mode: body?.capability === 'translation' ? 'translation' : 'assistant',
           context: body?.capability === 'translation' ? '' : selectedContext,
         }),
@@ -393,7 +394,7 @@
   }, true);
 })();
 </script>
-    <script type="module" crossorigin src="/assets/museum-BAd7mPo8.js"></script>
+    <script type="module" crossorigin src="/assets/museum-Buf4ALtO.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/museum-hmUdjqKe.css">
   </head>
   <body>

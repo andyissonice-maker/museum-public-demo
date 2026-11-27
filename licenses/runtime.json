@@ -1,7 +1,7 @@
 {
   "chunks": [
     {
-      "file": "assets/museum-BgvrBwao.js",
+      "file": "assets/museum-Buf4ALtO.js",
       "css": [
         "assets/museum-hmUdjqKe.css"
       ],
@@ -656,7 +656,7 @@
         },
         {
           "source": "harness/apps/web/src/museum/studio-shell.tsx",
-          "sha256": "1eb799f4a792649b130d9ebfccf8d91ab7feb252fc6a13b635f2c30940c82251",
+          "sha256": "9de16478899778589313d05a82350ddca7565e0df1a2aa309edcad3ab714a38d",
           "owner": "harness/apps/web/src/museum"
         },
         {
@@ -697,7 +697,7 @@
       ]
     },
     {
-      "file": "assets/calendar-CauGUjDk.js",
+      "file": "assets/calendar-lmZFJy61.js",
       "css": [
         "assets/calendar-Db0mjlPZ.css"
       ],
@@ -835,7 +835,7 @@
       ]
     },
     {
-      "file": "assets/files-CqYd7Ej2.js",
+      "file": "assets/files-CZX-Dsqb.js",
       "css": [],
       "modules": [
         {
@@ -986,7 +986,7 @@
       ]
     },
     {
-      "file": "assets/contacts-DtHL2aTL.js",
+      "file": "assets/contacts-ICPP6sZm.js",
       "css": [],
       "modules": [
         {
@@ -1058,7 +1058,7 @@
       ]
     },
     {
-      "file": "assets/finance--x_QpZjv.js",
+      "file": "assets/finance-Cx5y1XM4.js",
       "css": [],
       "modules": [
         {
@@ -1074,7 +1074,7 @@
       ]
     },
     {
-      "file": "assets/wechat-DUj7RTAS.js",
+      "file": "assets/wechat-CBbKMf-j.js",
       "css": [],
       "modules": [
         {
@@ -1085,7 +1085,7 @@
       ]
     },
     {
-      "file": "assets/photos-C5kI7DoG.js",
+      "file": "assets/photos-JSH97pST.js",
       "css": [],
       "modules": [
         {
@@ -1116,7 +1116,7 @@
       ]
     },
     {
-      "file": "assets/resource-tags-DruMHeaj.js",
+      "file": "assets/resource-tags-Cg2lsgcf.js",
       "css": [],
       "modules": [
         {
@@ -1127,7 +1127,7 @@
       ]
     },
     {
-      "file": "assets/tasks-8phKi7lj.js",
+      "file": "assets/tasks-B2dxE8Nx.js",
       "css": [],
       "modules": [
         {
@@ -1138,7 +1138,7 @@
       ]
     },
     {
-      "file": "assets/notices-B4BvspIs.js",
+      "file": "assets/notices-DkpV0nac.js",
       "css": [],
       "modules": [
         {
@@ -1159,7 +1159,7 @@
       ]
     },
     {
-      "file": "assets/account-D9fWzGAl.js",
+      "file": "assets/account-DHHAHmLM.js",
       "css": [],
       "modules": [
         {
@@ -1190,7 +1190,7 @@
       ]
     },
     {
-      "file": "assets/projects-gW0DhpGn.js",
+      "file": "assets/projects-DI4kibgK.js",
       "css": [],
       "modules": [
         {
@@ -1216,7 +1216,7 @@
       ]
     },
     {
-      "file": "assets/museum-frame-Db_laTZy.js",
+      "file": "assets/museum-frame-3Xh1FzoS.js",
       "css": [],
       "modules": [
         {
@@ -1227,7 +1227,7 @@
       ]
     },
     {
-      "file": "assets/tasks-detail-C8bFJJTP.js",
+      "file": "assets/tasks-detail-FVDRWlkf.js",
       "css": [],
       "modules": [
         {
@@ -1237,7 +1237,7 @@
         },
         {
           "source": "harness/apps/web/src/museum/tasks-dispatch.tsx",
-          "sha256": "ace2c9f21132bb5cbcf1d8657896fe83f23704495db82bda740c8fc60ff9b4ec",
+          "sha256": "262704e634adce4557dd156dbe406cc695ea043712d8057c477e5ce6c5f45117",
           "owner": "harness/apps/web/src/museum"
         },
         {
@@ -1248,7 +1248,7 @@
       ]
     },
     {
-      "file": "assets/intake-BALEuf6I.js",
+      "file": "assets/intake-CY7Pg3EX.js",
       "css": [],
       "modules": [
         {
@@ -1259,7 +1259,7 @@
       ]
     },
     {
-      "file": "assets/admin-DPrWTt2n.js",
+      "file": "assets/admin-Ca5pEmd3.js",
       "css": [
         "assets/admin-CqQ4DQc2.css"
       ],
@@ -1387,7 +1387,7 @@
       ]
     },
     {
-      "file": "assets/governance-widgets-DExLuxl7.js",
+      "file": "assets/governance-widgets-JxVlZy69.js",
       "css": [],
       "modules": [
         {
@@ -1398,7 +1398,7 @@
       ]
     },
     {
-      "file": "assets/design-system-page-Beh8VFih.js",
+      "file": "assets/design-system-page-B1K8YQFI.js",
       "css": [],
       "modules": [
         {
@@ -1409,18 +1409,30 @@
       ]
     },
     {
-      "file": "assets/assistant-page-vaGUY4wk.js",
-      "css": [],
+      "file": "assets/assistant-page-CvWnoimz.js",
+      "css": [
+        "assets/assistant-page-B2C3jy7H.css"
+      ],
       "modules": [
         {
+          "source": "harness/apps/web/src/museum/assistant-text.tsx",
+          "sha256": "02474b7228cf8d72322131e4b4d4d1a37bf1d74bbe72711f3d300c912e06d219",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/assistant-page.css",
+          "sha256": "31dec5dbf22421ecdad9a7730f8c456ef580a634ff98e5460dd9a176b15db290",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
           "source": "harness/apps/web/src/museum/assistant-page.tsx",
-          "sha256": "6a0f3da3b1ec500ed21cdb3947e17fca741acfc447ee08af7bb5d4cb0c2c19b9",
+          "sha256": "3eea78560f7baa1daa9d596dab96de780fda49c722f506a08c786f0da42c2112",
           "owner": "harness/apps/web/src/museum"
         }
       ]
     },
     {
-      "file": "assets/file-preview-pdf-DLlWz1Ax.js",
+      "file": "assets/file-preview-pdf-4cPIhLBa.js",
       "css": [],
       "modules": [
         {
@@ -4924,27 +4936,28 @@
     "assets/museum-hmUdjqKe.css": "7ec8a69a4492fae5badef447a802e52c15217f52fefb0bf14191ec4036de2a8c",
     "assets/calendar-Db0mjlPZ.css": "0b0dafcd91020da2d8b62d99cb76c648a3d165f23762fc1d27339f2fbbdcf306",
     "assets/admin-CqQ4DQc2.css": "15fb337b0e30138951b705c39f4228e50e3ac8a0ac20db4afbbcb56bdd4a69c0",
-    "assets/museum-BgvrBwao.js": "92e85bd3e6ffbc279590c1ebc2289919e922e041045b7cffaca02e39fa3fcab6",
-    "assets/calendar-CauGUjDk.js": "7d90716cfbc438e8d9819767134f7859cfa2c1a3b122e8c9df280e6d1a0bb2d2",
-    "assets/files-CqYd7Ej2.js": "d93b18e0f6c9135dee2f1c0c52d99e5c04c1cc581e1b78c64fa8be5b6856825d",
-    "assets/contacts-DtHL2aTL.js": "e6c4bbe68d41e05c866f7f80384194dec621d6054146e740b434179d1543c91e",
+    "assets/assistant-page-B2C3jy7H.css": "27e6d7f2f8278e50ed1a55cb5fb74ca6e5b1f70c17e54bb04352b1744a379fc7",
+    "assets/museum-Buf4ALtO.js": "5252d6516cd710b8633cff2b4ab8eb8ec9a0dc28969ff674cc610cc30c51c782",
+    "assets/calendar-lmZFJy61.js": "a59ce92ad03910d560dcfbead04dcb003231fa06484a8d545eec14cec7dc1bbf",
+    "assets/files-CZX-Dsqb.js": "e5d235e501201e906a8704061e1c040a192208dffc1fd442aeef02968895de0f",
+    "assets/contacts-ICPP6sZm.js": "00fa02130bb21334be732117a321d1e67537f6799e2ef801235749b62c8d01b6",
     "assets/api-Te56Z5iG.js": "9e61f506057b042f6d9f644429c733c450c7eff6720f0f162bc883c5dc9295c5",
-    "assets/finance--x_QpZjv.js": "8439151c2df85a5dc29959566ce074ecfa56a7010bed3be647600306b90ec897",
-    "assets/wechat-DUj7RTAS.js": "0387527d757ad6727c37088d90c0a6c4dc402f3779930f0d3bcf9866a5652a7a",
-    "assets/photos-C5kI7DoG.js": "8ff2899a69f7370214570aad313146137ef8461f298bc0a56b8074d12c62b00b",
-    "assets/resource-tags-DruMHeaj.js": "b2f36360f564147c02a50599aefcbd355f1c1533bbc79baaf95d3e99d5b65113",
-    "assets/tasks-8phKi7lj.js": "5c4eeb1dd0f919c86e0e26db1f1c6dec538c3c01352e98171f4995ae911825b4",
-    "assets/notices-B4BvspIs.js": "45070fe9e1a34e835d53c1d916aa1da6407fff739921ce94782530adf3106b87",
-    "assets/account-D9fWzGAl.js": "33dee60072d831a157de57550ff836b51f7b1b1d76236897f23ff256ec871923",
-    "assets/projects-gW0DhpGn.js": "13d25c53b267094b13e2e259f1b8fc0b7cb51be25590c5b02410405b86dd2827",
-    "assets/museum-frame-Db_laTZy.js": "2c4b3550b52cc20643209303039474c7b2265787be83714aa4df5df6340737dc",
-    "assets/tasks-detail-C8bFJJTP.js": "954f199a0dbc002cf66c1d883c107b3f4ab6f74a41bc8ff6f6c09cfddf94341f",
-    "assets/intake-BALEuf6I.js": "06ab6145de4e15d8815fcac09933981ab63e7d6fce0478c0f1c6fb81f1806b2e",
-    "assets/admin-DPrWTt2n.js": "6fe3b75f521467e329b2ac871e08f05587060d42a766436c37b3c0b03c2c6ed4",
-    "assets/governance-widgets-DExLuxl7.js": "58d8ca9e835dc9c4af727e90264b210d8817391f77aa9cd46335c28da73cb204",
-    "assets/design-system-page-Beh8VFih.js": "e4c8b77725977d53596d2cf2539579da61a0f759d2d2b099ddea5d1c9cd30f2a",
-    "assets/assistant-page-vaGUY4wk.js": "14b0ad4423bfdc73d6d46ed4beec62cf42421942adc6ab97d9993957c41cc76b",
-    "assets/file-preview-pdf-DLlWz1Ax.js": "e27c0bf580ad2918204bba063c9d7da9c5e4396dea40a5940c2054dcf60b79f0",
+    "assets/finance-Cx5y1XM4.js": "485c082b994aec61201f15ee017ba54fa06a5754f2361b8dc02fd52b7cb5e6ed",
+    "assets/wechat-CBbKMf-j.js": "292007cbb4f1ad188cf80d1696ede2d2edd0907ec851b61619cfc9ba3a05e65c",
+    "assets/photos-JSH97pST.js": "4453ced3f5b30843f9f77d1787fc4eca9bb515b0b80a2d2369968914facc2be9",
+    "assets/resource-tags-Cg2lsgcf.js": "6b1bd5cf08c4d125a7bd1b2b86349f6f313c4774b1e44cf04d65d82d22750b9e",
+    "assets/tasks-B2dxE8Nx.js": "962a944b38f21216d07036805e4a829b210aba7c7d1d547fc55a6f607f1f0755",
+    "assets/notices-DkpV0nac.js": "d7d27febefb65a5e8852e0e01a8b36de2ba758c75b9d5d4e414a738372abf4e2",
+    "assets/account-DHHAHmLM.js": "241d2e0ee9fae3c68cb4a4b08ed3c39c93ed07bebe198f46bc1bd3ac5874f534",
+    "assets/projects-DI4kibgK.js": "d456acec04c3f87275ea31fc657356211b49e4bbd6bb4428e1a9642fc60d8add",
+    "assets/museum-frame-3Xh1FzoS.js": "ca71671a366e8214cc7b5f14c455263d40d00f7e9f9f9adfcb4f036c0890acf6",
+    "assets/tasks-detail-FVDRWlkf.js": "13351784998444d28c0d1ae4518d9652a33925ca0f53d8ad3311585e6db4491c",
+    "assets/intake-CY7Pg3EX.js": "6529e501f39f3b0f364229fa46a88ae00309c7370a2029d2ac78202d1dea5026",
+    "assets/admin-Ca5pEmd3.js": "c4a22b6dd3440f3fdb3b5131f6edb4ccd0f2abf4a2ff695cfac1bbcd109a07fd",
+    "assets/governance-widgets-JxVlZy69.js": "30612870ae8d8467c01021fc70ed0db4e397f6e276c8e782deeeaf97a56340eb",
+    "assets/design-system-page-B1K8YQFI.js": "2ce7e651f29643d10f2e7e309d35208fe946be953954e9ae4c0c0b59b234ecc5",
+    "assets/assistant-page-CvWnoimz.js": "c26cdb4b6bf8ddb2cf88a5583e9578dc409b9a39e45161adafbc946a68102486",
+    "assets/file-preview-pdf-4cPIhLBa.js": "1101f9136c34e4d1ddb48fa6b54f6e2417b0ee4dd5ff745bfad9173ca1953b71",
     "assets/78-EUC-H-C42bVnG-.js": "4288b0cb9be1e628e5a6e06e1b48300182f32158bb2829392d9d7b4bd2edd4fd",
     "assets/78-EUC-V-DrXQhmwI.js": "0f2371998a2ad924e10dcb5c3e52f5b15e9d94b0ead4434c5885beb94ef6437b",
     "assets/78-H-CMIl2hob.js": "5f24ee9f44d0c3e7d2f44178ac08fbf471d67c2638b6317031221ac101ec4dc4",
@@ -5142,8 +5155,8 @@
     "brand/floral/SOURCES.md": "e00e5841a434638c9a5448e92bb9414b478aeedc6a529f4ffb26962543f934a1",
     "manifest.webmanifest": "622875799d46e27f61cdfa4a79315e7f8fe72ab406f298188ba12d04456bc2c9",
     "licenses/harness-MIT.txt": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
-    "museum.html": "5efb3cf39901569b45fd243473fda8775e2e1e9e7d6f5c624b783e21597b1085",
-    "index.html": "5efb3cf39901569b45fd243473fda8775e2e1e9e7d6f5c624b783e21597b1085",
+    "museum.html": "9367312650c2b7dfac13e6a329705fc41aa1fe271ede6fd951d65611a0e3a662",
+    "index.html": "9367312650c2b7dfac13e6a329705fc41aa1fe271ede6fd951d65611a0e3a662",
     "licenses/texts/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
     "licenses/texts/aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2.txt": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2",
     "licenses/texts/b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7.txt": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7",
