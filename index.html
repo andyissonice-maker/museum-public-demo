@@ -40,9 +40,11 @@
   font: 16px/1.5 system-ui, sans-serif;
 }
 </style>
-    <script>(() => {
+    <script data-assistant-url="https://museum-ssistant-ybdmlpgloi.cn-hongkong.fcapp.run/chat">(() => {
+  const assistantUrl = document.currentScript?.dataset.assistantUrl;
   const user = {
     id: 'public-demo-viewer', name: '演示访客', role: 'member',
+    publicDemoAssistant: assistantUrl ? 'enabled' : 'unavailable',
     permissions: ['projects:view', 'tasks:view', 'calendar:view', 'documents:view', 'photos:view', 'contacts:view', 'ai:use'],
   };
   const now = new Date();
@@ -127,6 +129,43 @@
     status, headers: { 'Content-Type': 'application/json' },
   });
   const unavailable = () => json({ error: '公开演示仅供浏览。当前操作需要连接真实馆务服务。' }, 403);
+  async function askAssistant(init) {
+    let body;
+    try {
+      body = JSON.parse(init?.body);
+    } catch {
+      return json({ error: '无法读取问题，请重新发送。' }, 400);
+    }
+    const project = projects.find((row) => row.id === body?.pageContext?.projectId);
+    const scopedProjects = project ? [project] : projects;
+    const selectedContext = scopedProjects.map((row) => [
+      row.name + '：' + row.description,
+      ...tasks.filter(task => task.projectId === row.id).map(task =>
+        '任务：' + task.name + '，状态：' + ({ in_progress: '进行中', pending_review: '待验收', done: '已完成' })[task.status] +
+        '，截止：' + new Date(task.dueAt).toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }) +
+        (task.priority === 'high' ? '，高优先级' : '')
+      ),
+      ...calendar.filter(event => event.projectId === row.id).map(event =>
+        '日程：' + event.name + '，' + new Date(event.startsAt).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+      ),
+    ].join('\n')).join('\n');
+    try {
+      return await original(assistantUrl, {
+        method: 'POST',
+        credentials: 'omit',
+        headers: { 'Content-Type': 'application/json' },
+        signal: init?.signal,
+        body: JSON.stringify({
+          message: body?.message,
+          mode: body?.capability === 'translation' ? 'translation' : 'assistant',
+          context: body?.capability === 'translation' ? '' : selectedContext,
+        }),
+      });
+    } catch (error) {
+      if (error.name === 'AbortError') throw error;
+      return json({ error: '演示助手连接失败，请稍后再试。' }, 502);
+    }
+  }
   const original = window.fetch.bind(window);
   window.fetch = async (input, init) => {
     const url = new URL(input instanceof Request ? input.url : input, location.href);
@@ -174,6 +213,7 @@
           /\/(records|submissions|revisions)$/.test(path)) return json([]);
       return unavailable();
     }
+    if (assistantUrl && method === 'POST' && path === '/agent/chat') return askAssistant(init);
     return unavailable();
   };
   // Keep any demonstration-only editing action from pointing at the viewer's machine.
@@ -190,7 +230,7 @@
   }, true);
 })();
 </script>
-    <script type="module" crossorigin src="/assets/museum-BzuqjX4B.js"></script>
+    <script type="module" crossorigin src="/assets/museum-ByUChH5J.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/museum-hmUdjqKe.css">
   </head>
   <body>
