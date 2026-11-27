@@ -98,6 +98,13 @@
     createdAt: instant(-2), updatedAt: instant(-1), uploadedByName: '演示馆员',
     canManage: false, category: { name: '演示资料' },
   }));
+  const legacyDocument = {
+    id: demoId(65), projectId: null, folderId: null, name: '历届开放日接待流程（存档）.pdf',
+    version: 1, contentRevision: 1, size: 48320, createdAt: instant(-40), updatedAt: instant(-30),
+    uploadedByName: '演示档案员', canManage: false, isLocked: true, lockedAt: instant(-30),
+    category: { name: '历史档案' },
+  };
+
   const photoAssets = [
     ['celadon', 0, '青瓷莲瓣碗'],
     ['indigo', 0, '靛蓝印花织物'],
@@ -133,6 +140,17 @@
     createdAt: instant(-4), updatedAt: instant(-1), uploadedByName: '演示馆员',
     canManage: false, category: { name: '演示资料' },
   })));
+
+  const archivedFolder = {
+    id: demoId(54), name: '初版展签 · 历史归档', projectId: projects[0].id, parentId: null,
+    version: 2, archivedAt: instant(-5), childCount: 0, fileCount: 1, path: [],
+  };
+  documents.push({
+    id: demoId(64), projectId: projects[0].id, folderId: archivedFolder.id,
+    name: '首轮展签校对稿.docx', size: 19600, version: 1, contentRevision: 1,
+    createdAt: instant(-8), updatedAt: instant(-5), uploadedByName: '演示档案员',
+    canManage: false, category: { name: '历史档案' },
+  });
 
   const money = (cents) => (cents / 100).toFixed(2);
   const claims = [
@@ -174,6 +192,13 @@
     dueAt: instant(-1), version: 2, progress: 'done', receipt: 'read', overdue: false,
     readAt: instant(-3), completedAt: instant(-1),
   }];
+  const sentDispatch = {
+    id: demoId(86), parentTaskId: tasks[2].id, batchId: demoId(87), dispatcherId: user.id,
+    recipientId: demoId(84), recipientName: '演示摄影员',
+    title: '复查第二批纸本档案命名', body: '按藏品编号与正反面标记复核相片文件名。',
+    dueAt: instant(3), version: 1, progress: 'open', receipt: 'read', overdue: false,
+    readAt: instant(-1), completedAt: null,
+  };
   const taskRecord = (task) => ({
     id: 'record-' + task.id, summary: '完成第一轮资料核对',
     result: '已核对演示资料，待汇总复核意见。', occurredAt: instant(-1),
@@ -274,10 +299,10 @@
         case '/calendar/projects': return json(query.has('cursor') ? [] : projects);
         case '/tasks': return json(scoped(tasks, query));
         case '/calendar': return json(scoped(calendar, query));
-        case '/documents': return json(scoped(documents, query).filter((row) =>
+        case '/documents': return json((query.get('scope') === 'legacy' ? [legacyDocument] : scoped(documents, query)).filter((row) =>
           query.has('folderId') ? row.folderId === query.get('folderId') : query.get('folder') !== 'none' || !row.folderId
         ));
-        case '/folders': return json(query.get('archived') || query.has('parentId') ? [] : scoped(folders, query));
+        case '/folders': return json(query.has('parentId') ? [] : scoped(query.get('archived') ? [archivedFolder] : folders, query));
         case '/photos': return json(scoped(photos, query));
         case '/photos/albums': return json(scoped(albums, query));
         case '/reimbursements': return json(claimsForYear(query).filter(row => !query.has('status') || row.status === query.get('status')));
@@ -299,7 +324,7 @@
         case '/dispatch/inbox': return json({
           items: dispatch.filter(row => query.get('filter') === 'past' ? row.progress === 'done' : row.progress === 'open'), nextCursor: null,
         });
-        case '/dispatch/sent': return json({ items: [], nextCursor: null });
+        case '/dispatch/sent': return json({ items: [sentDispatch], nextCursor: null });
         case '/dispatch/parents': return json({ items: tasks.map(task => ({ id: task.id, name: task.name, projectId: task.projectId })), nextCursor: null });
         case '/me/layout': return json({}, 404);
       }
@@ -320,23 +345,23 @@
       }
       const matchingPhoto = photos.find(row => path === '/photos/' + row.id + '/download');
       if (matchingPhoto) return original('/demo-assets/gallery/' + matchingPhoto.id + '.webp', { signal: init?.signal });
-      const folder = folders.find(row => path === '/folders/' + row.id);
+      const folder = [...folders, archivedFolder].find(row => path === '/folders/' + row.id);
       if (folder) return json(folder);
       const claim = claims.find(row => path === '/reimbursements/' + row.id);
       if (claim) return json(claim);
-      const dispatchDetail = dispatch.find(row => path === '/dispatch/' + row.id);
+      const dispatchDetail = [...dispatch, sentDispatch].find(row => path === '/dispatch/' + row.id);
       if (dispatchDetail) return json(dispatchDetail);
       const task = tasks.find(row => path === '/tasks/' + row.id + '/records');
       if (task) return json([taskRecord(task)]);
       const boardTask = tasks.find(row => path === '/tasks/' + row.id + '/board');
-      if (boardTask) return json(dispatch.filter(row => row.parentTaskId === boardTask.id).map(row => ({
-        id: row.id, recipientName: user.name, dueAt: row.dueAt, overdue: row.overdue, progress: row.progress,
+      if (boardTask) return json([...dispatch, sentDispatch].filter(row => row.parentTaskId === boardTask.id).map(row => ({
+        id: row.id, recipientName: row.recipientName || user.name, dueAt: row.dueAt, overdue: row.overdue, progress: row.progress,
       })));
       if (path === '/tasks/' + tasks[1].id + '/submissions') return json([{
         id: demoId(91), round: 1, note: '已确认入口集合点与两条备选路线，等候展务组复核。',
         status: 'submitted', reviewNote: '', submittedByName: '演示访客', submittedAt: instant(-1),
       }]);
-      const revisions = documents.find(row => path === '/documents/' + row.id + '/revisions');
+      const revisions = [...documents, legacyDocument].find(row => path === '/documents/' + row.id + '/revisions');
       if (revisions) return json(Array.from({ length: revisions.version }, (_, index) => ({
         id: revisions.id + '-v' + (index + 1), number: index + 1, name: revisions.name, size: revisions.size,
         uploadedByName: '演示馆员', createdAt: index === 0 ? revisions.createdAt : revisions.updatedAt,
@@ -368,7 +393,7 @@
   }, true);
 })();
 </script>
-    <script type="module" crossorigin src="/assets/museum-BgvrBwao.js"></script>
+    <script type="module" crossorigin src="/assets/museum-BAd7mPo8.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/museum-hmUdjqKe.css">
   </head>
   <body>
