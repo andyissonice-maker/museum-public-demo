@@ -1,9 +1,9 @@
 {
   "chunks": [
     {
-      "file": "assets/museum-Ddsq7UjM.js",
+      "file": "assets/museum-BzuqjX4B.js",
       "css": [
-        "assets/museum-CtTtI93K.css"
+        "assets/museum-hmUdjqKe.css"
       ],
       "modules": [
         {
@@ -495,18 +495,216 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
+          "source": "harness/apps/web/src/museum/calendar.css",
+          "sha256": "aa7157130dd0126d4dcfb533f15ea4aa333d5f272b79fe2e29fbbbdebd537322",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/file-preview.css",
+          "sha256": "ca4e23f84a3bb9349beb4763ea6c6c5f4324985f777ee5c6b02f4da3e1b03dab",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/design-system/museum-liquid-glass/tokens.css",
+          "sha256": "730f9c63949cce2a85d52ee708585d6bfd1d7ad8611ed4f23543b6351b8514b4",
+          "owner": "harness/apps/web"
+        },
+        {
+          "source": "harness/apps/web/src/museum/workspace.css",
+          "sha256": "86a0c6a35e08aa3f8a94cc2df2bd78c740a574a80f9769ed1349f499bd1f8387",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/modules.css",
+          "sha256": "a7591d324f5cce0c1e81138882b9e4b292d0ffcacd4bf436d907f989eb524d64",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/responsive-audit.css",
+          "sha256": "89ceee849e3c836194c0ccfea4506319b7f50ce7c6f173c0fa2ab09987378a80",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/resource-tags.css",
+          "sha256": "98221fd70dd9637cbff81ee349baa580187cf327629c371ad10fb875fbd954ca",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/contacts.css",
+          "sha256": "e1e155b2e8734ad9eb5f09f1dfeccdf077b99ae6684e98bb9ac719d2e7003d46",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/finance.css",
+          "sha256": "217b044c5ef0cd74fa7173cc3d036fd1b58e86b84e45da6cda41590fe38f14cf",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/twentyfirst.css",
+          "sha256": "51feea8a4685af24967d0cf28ec11584709bf77892407dc8ea4f12166cde2fe5",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/wechat.css",
+          "sha256": "2b8c6326bb7251033929a3711740a12232919f5f4d914f314ec63b8c505e0742",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/photos.css",
+          "sha256": "9138589323be19ab9d9b31d803438151d2d6a7212678edfe6ed05f427d7c2622",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/tasks.css",
+          "sha256": "04474a8581746342e3c3e88e0711ba3254ebccad91bd3d899fbebbbdea26b5b9",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/notices.css",
+          "sha256": "1b7cdbd500c8113c58bc41e6dcf3b6d0cef7a5c9d191cb866fae108d30731281",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/account.css",
+          "sha256": "1890d63e407613a966c66c97668a3c1bc2e13588cd30eb4e4db20c9664ddde98",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/projects-lifecycle.css",
+          "sha256": "3390ae21747f076fb9973dfaf48ee07023ad6e3fc9de1e476b51c6c1e6d11589",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/intake.css",
+          "sha256": "c80bface60dcd57382c6d70c662e66e8ba68d7dd57ffaec39a47e3752a7ee333",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/office.tsx",
+          "sha256": "0828b505a93715ece22166a45ca21180d93434619262624b3465ddb5c5478696",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/account-model.ts",
+          "sha256": "09e1831678e933dac50b56b4e3575055e7db0cdc34e37b5e2a6d12390c7880d7",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/page-boundary.tsx",
+          "sha256": "afcd2e5c2b190cfc0c7cc580410ad9799eeeed6063e0df94b6e360ac3883d6d7",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/account-entry.tsx",
+          "sha256": "6237bd1a023cf85ae412082ff6bb3784dbe3c12d9bb4bd14406ac3ce9cbae875",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
           "source": "harness/apps/web/src/museum/calendar-model.ts",
           "sha256": "40452831155d090275c286a43fee1bca212c07119790eefb2597db5957874af2",
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/calendar-form.tsx",
-          "sha256": "2e3f6ea83e884af64c416b546bb187c504cc83097c05ecd82ed097b9d84fdb9e",
+          "source": "harness/apps/web/src/museum/tasks-model.ts",
+          "sha256": "6a86bb65a79f1ec20edd455e2257a052cc5361536fc6b9bfd1248a06c8de7dbf",
           "owner": "harness/apps/web/src/museum"
         },
         {
           "source": "harness/apps/web/src/museum/project-types.ts",
           "sha256": "8a3f051180015a63d2884f2ac6a6e5da8a88e493cc07a6d401e2e525e3e93966",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/photos-model.ts",
+          "sha256": "ef43f1323ab2c1f325e400c28bd1261322b07a0dadaf1f595bcd731fcf861e26",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/twentyfirst.tsx",
+          "sha256": "c42f8e1509bc5e6c162805ba266b1817163945f55cd6f5f97494c8eb354701a4",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/claude-studio.css",
+          "sha256": "918b0e2764f0e5d01e159596bd322f2b875c4917db2c8c87fc289f11d5949f4d",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/claude-studio.tsx",
+          "sha256": "eaffcbb1ce479bacf7864b19f80d9b422c3c987f175b1fd8e4f434e3c8ea3b43",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/assets/museum-logo.png",
+          "sha256": "30964b5f74619ad25982cef2c07c35427b8b7c79b442bc730bb60254bdc5d407",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/studio-effects.ts",
+          "sha256": "488d4586434f2dd25b107d7559589401fbc67be1299148675910168b347dd0bf",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/assets/museum-logo-dark.png",
+          "sha256": "7d2f7069e1223cfda97043effb9e3f4eedb5770957814155257d3a8dc5ac39b8",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/assets/museum-seal.png",
+          "sha256": "fd4a8ec46183cfb1ecb1855ec0462e5be2b1ab6d5c6352a0dee98ba0dbc5cd45",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/studio-shell.tsx",
+          "sha256": "d79a9273b4afc93c3df50ae2c1e67bd94279b2f7a7501c7ba156393ac3b12af7",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/workspace.tsx",
+          "sha256": "ed0cf5cf7cd35d15eea91aeaf050a999cb09c78e04814ac47541358eeb9d3618",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/bootstrap.ts",
+          "sha256": "6c00c7cef9470b295216c82c49855fbe43105874a4c9c27ac314ea465de2173e",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/packages/client/web/src/window-drag/regions.ts",
+          "sha256": "55144a53a9ead129e15816acb564ea389c80a77ac6ba87f7e3b57144144cafdb",
+          "owner": "harness/packages/client/web"
+        },
+        {
+          "source": "harness/packages/client/web/src/window-drag/recall.ts",
+          "sha256": "392014d25beab1e9283ca63de2eda43650f86244f69b06b637b744c4fb2293d7",
+          "owner": "harness/packages/client/web"
+        },
+        {
+          "source": "harness/packages/client/web/src/base.css",
+          "sha256": "a02c91e1249fe0c69bcf39fdd98c3999329066e751d547332024672d773a4956",
+          "owner": "harness/packages/client/web"
+        },
+        {
+          "source": "harness/packages/client/web/src/boot.ts",
+          "sha256": "4dd433abccb6aae86669a90122f653475b01451e1b37472b3a4908abc9a84fe7",
+          "owner": "harness/packages/client/web"
+        },
+        {
+          "source": "harness/apps/web/src/museum/entry.ts",
+          "sha256": "bafacbc9d5556ef914dc65b941c9eb845a531d9aa89b588b19d5028108c758da",
+          "owner": "harness/apps/web/src/museum"
+        }
+      ]
+    },
+    {
+      "file": "assets/calendar-D5jzy3Jy.js",
+      "css": [
+        "assets/calendar-Db0mjlPZ.css"
+      ],
+      "modules": [
+        {
+          "source": "harness/apps/web/src/museum/calendar-form.tsx",
+          "sha256": "2e3f6ea83e884af64c416b546bb187c504cc83097c05ecd82ed097b9d84fdb9e",
           "owner": "harness/apps/web/src/museum"
         },
         {
@@ -630,20 +828,16 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/calendar.css",
-          "sha256": "aa7157130dd0126d4dcfb533f15ea4aa333d5f272b79fe2e29fbbbdebd537322",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/calendar.tsx",
           "sha256": "a5f89035ccc9dcae952556987637d268a0b9113d63912081eafb3e0cb88d744f",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/museum-frame.tsx",
-          "sha256": "302c7182c9d01f306324479dd93cad02f2c658e6da61d6dd2db71db5a97ad9e9",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/files-DTozNEiO.js",
+      "css": [],
+      "modules": [
         {
           "source": "museum-product/src/features/documents/file-sort.ts",
           "sha256": "b1cf69c140bd63121d2408c9347e15ec8d7e29f146c3b81dde499f17e7ae47ca",
@@ -765,28 +959,8 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/studio-effects.ts",
-          "sha256": "488d4586434f2dd25b107d7559589401fbc67be1299148675910168b347dd0bf",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/file-revisions.tsx",
           "sha256": "82bd975a3f8579f7ddee2d8da82e35cf414eddc344a7d7e0489e9beecde44129",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/twentyfirst.css",
-          "sha256": "51feea8a4685af24967d0cf28ec11584709bf77892407dc8ea4f12166cde2fe5",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/twentyfirst.tsx",
-          "sha256": "c42f8e1509bc5e6c162805ba266b1817163945f55cd6f5f97494c8eb354701a4",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/office.tsx",
-          "sha256": "0828b505a93715ece22166a45ca21180d93434619262624b3465ddb5c5478696",
           "owner": "harness/apps/web/src/museum"
         },
         {
@@ -795,24 +969,9 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "museum-product/src/lib/request-session.ts",
-          "sha256": "b0cc6a39d60d672d31cbf85b1fa9d1ad05ca7a34cb050cb9f6551cb58832ddbb",
-          "owner": "museum-product/"
-        },
-        {
-          "source": "museum-product/src/lib/api.ts",
-          "sha256": "0d1068c7997a847ce0ed14c9925211f1c81cd7c8610149b78866e1ccabc5e38c",
-          "owner": "museum-product/"
-        },
-        {
           "source": "museum-product/src/lib/document-preview.ts",
           "sha256": "52b6b0f4625127844c786526035f6796b53516a2004194eb7a13663029bbc1c1",
           "owner": "museum-product/"
-        },
-        {
-          "source": "harness/apps/web/src/museum/file-preview.css",
-          "sha256": "ca4e23f84a3bb9349beb4763ea6c6c5f4324985f777ee5c6b02f4da3e1b03dab",
-          "owner": "harness/apps/web/src/museum"
         },
         {
           "source": "harness/apps/web/src/museum/file-preview.tsx",
@@ -820,35 +979,16 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/governance-widgets.tsx",
-          "sha256": "5ff0699132c4ed6fac1128a7b653de292a859e0c05d7e3195f0939f80298af0c",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/files.tsx",
           "sha256": "8651ffa9589139216f46b5ae4b66b4ff91c558bb7aa50844f0ae08b85b0c3824",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/design-system/museum-liquid-glass/tokens.css",
-          "sha256": "730f9c63949cce2a85d52ee708585d6bfd1d7ad8611ed4f23543b6351b8514b4",
-          "owner": "harness/apps/web"
-        },
-        {
-          "source": "harness/apps/web/src/museum/workspace.css",
-          "sha256": "86a0c6a35e08aa3f8a94cc2df2bd78c740a574a80f9769ed1349f499bd1f8387",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/modules.css",
-          "sha256": "a7591d324f5cce0c1e81138882b9e4b292d0ffcacd4bf436d907f989eb524d64",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/responsive-audit.css",
-          "sha256": "89ceee849e3c836194c0ccfea4506319b7f50ce7c6f173c0fa2ab09987378a80",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/contacts-BXCyo6SI.js",
+      "css": [],
+      "modules": [
         {
           "source": "museum-product/src/lib/contact-directory.ts",
           "sha256": "5e1a7992e43590f387af9f7fa8743160920c59fe26f2b8cbb7cc2ca5b9bea693",
@@ -875,16 +1015,6 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/resource-tags.css",
-          "sha256": "98221fd70dd9637cbff81ee349baa580187cf327629c371ad10fb875fbd954ca",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/resource-tags.tsx",
-          "sha256": "f7304c21af40b0f7fe67a1a0a1b06cebb6fa9d07d2d28653209f04b583faea94",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "museum-product/src/lib/contact-lifecycle.ts",
           "sha256": "dc5332db1607d6df65ba98fa6d3b9d582bc0c210fbfc725ee40ca0edf6d11f22",
           "owner": "museum-product/"
@@ -905,20 +1035,32 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/contacts.css",
-          "sha256": "e1e155b2e8734ad9eb5f09f1dfeccdf077b99ae6684e98bb9ac719d2e7003d46",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/contacts.tsx",
           "sha256": "818e88b608025c18562f2a42b1e45d457f9a67f7017c1fc5d678e003f79f5ecf",
           "owner": "harness/apps/web/src/museum"
+        }
+      ]
+    },
+    {
+      "file": "assets/api-Te56Z5iG.js",
+      "css": [],
+      "modules": [
+        {
+          "source": "museum-product/src/lib/request-session.ts",
+          "sha256": "b0cc6a39d60d672d31cbf85b1fa9d1ad05ca7a34cb050cb9f6551cb58832ddbb",
+          "owner": "museum-product/"
         },
         {
-          "source": "harness/apps/web/src/museum/finance.css",
-          "sha256": "217b044c5ef0cd74fa7173cc3d036fd1b58e86b84e45da6cda41590fe38f14cf",
-          "owner": "harness/apps/web/src/museum"
-        },
+          "source": "museum-product/src/lib/api.ts",
+          "sha256": "0d1068c7997a847ce0ed14c9925211f1c81cd7c8610149b78866e1ccabc5e38c",
+          "owner": "museum-product/"
+        }
+      ]
+    },
+    {
+      "file": "assets/finance-D49L3j2A.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/finance-model.ts",
           "sha256": "fa0fac17cc0c9c9eeff22089053e15e1ad072e0a8edf5d76d43ce8313ba0067a",
@@ -928,22 +1070,24 @@
           "source": "harness/apps/web/src/museum/finance.tsx",
           "sha256": "33e3e31f6f35617fdadb4e2082b6053ec28776f9e0acc789e5d82b9d30d4d8c4",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/wechat.css",
-          "sha256": "2b8c6326bb7251033929a3711740a12232919f5f4d914f314ec63b8c505e0742",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/wechat-_QfhiJaf.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/wechat.tsx",
           "sha256": "6e68ad58f4a64ddd3bb59ffceea94122f35453473f3494fe54aacdaecdf723c6",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/photos-model.ts",
-          "sha256": "ef43f1323ab2c1f325e400c28bd1261322b07a0dadaf1f595bcd731fcf861e26",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/photos-IkChX2ia.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/photos-viewer.tsx",
           "sha256": "09636dd6a6411a717601413f70101dedcf222f707fc8b65325a428f0b8ce5dc0",
@@ -965,45 +1109,38 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/photos.css",
-          "sha256": "9138589323be19ab9d9b31d803438151d2d6a7212678edfe6ed05f427d7c2622",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/photos.tsx",
           "sha256": "baa9798c20f39ad5e2258d07b19602d197c22951f789971cdc4780b5d4451b65",
           "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/resource-tags-Hno68wOU.js",
+      "css": [],
+      "modules": [
         {
-          "source": "harness/apps/web/src/museum/tasks-model.ts",
-          "sha256": "6a86bb65a79f1ec20edd455e2257a052cc5361536fc6b9bfd1248a06c8de7dbf",
+          "source": "harness/apps/web/src/museum/resource-tags.tsx",
+          "sha256": "f7304c21af40b0f7fe67a1a0a1b06cebb6fa9d07d2d28653209f04b583faea94",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/write-dialog.tsx",
-          "sha256": "03a90f025a8103a4c0e9cd8b78fb794001dc8946ef0007132dbdbb201f12ad34",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/tasks-dispatch.tsx",
-          "sha256": "2bb500d85dabd52194d1e38e9e266f7431a52054ea88eb6c20562854d2eb8343",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/tasks-detail.tsx",
-          "sha256": "6738e9470cf48e49f9912436bc6623fc3e828963bdf2ae068b8949876aa41458",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/tasks.css",
-          "sha256": "04474a8581746342e3c3e88e0711ba3254ebccad91bd3d899fbebbbdea26b5b9",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/tasks-DR6YOI8U.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/tasks.tsx",
           "sha256": "ca3804db99fcd84a0b40997ae9c5e68d7caf084567b6692d6df4d3a5a0cffcd3",
           "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/notices-CnXmOW8l.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/notices-model.ts",
           "sha256": "4a3b0cdc497ed0e61845b60d9a86f82c4597ca943a90245911fe67ee6a858d2d",
@@ -1015,39 +1152,25 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/notices.css",
-          "sha256": "1b7cdbd500c8113c58bc41e6dcf3b6d0cef7a5c9d191cb866fae108d30731281",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/notices.tsx",
           "sha256": "3c12251c4b44d0a2503aa7b9b87c4b73786e1737c56eba1d37b99f2877f9079d",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/account-model.ts",
-          "sha256": "f4677cc806bf734787e59125680c2212cf0df33647648f661584523553ea59bd",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/account-layout.tsx",
-          "sha256": "ea3f7d5550b181e87d905573091b4d64f6938c9853755a3f0d2f2a7d7b0b8fd9",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/page-boundary.tsx",
-          "sha256": "afcd2e5c2b190cfc0c7cc580410ad9799eeeed6063e0df94b6e360ac3883d6d7",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/account-entry.tsx",
-          "sha256": "6237bd1a023cf85ae412082ff6bb3784dbe3c12d9bb4bd14406ac3ce9cbae875",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/account-BnZPMSwv.js",
+      "css": [],
+      "modules": [
         {
           "source": "museum-product/src/lib/account-section.ts",
           "sha256": "47c0b67ba08e42681ef4a29f90c2405fc0cf22bccd00ed6ab9021a9d5562447f",
           "owner": "museum-product/"
+        },
+        {
+          "source": "harness/apps/web/src/museum/account-layout.tsx",
+          "sha256": "4420b4a22a53e7b04b937d14514e1569de143f15ed6b69b37f2dde2a5cbfc72f",
+          "owner": "harness/apps/web/src/museum"
         },
         {
           "source": "harness/apps/web/src/museum/account-password.tsx",
@@ -1060,20 +1183,16 @@
           "owner": "harness/apps/web/src/museum"
         },
         {
-          "source": "harness/apps/web/src/museum/account.css",
-          "sha256": "1890d63e407613a966c66c97668a3c1bc2e13588cd30eb4e4db20c9664ddde98",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
           "source": "harness/apps/web/src/museum/account.tsx",
           "sha256": "c48f8f7f404a4ed096518d7a4ba1ce1b694be2c526aa189f9649d4b92c378e16",
           "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/projects-lifecycle.css",
-          "sha256": "3390ae21747f076fb9973dfaf48ee07023ad6e3fc9de1e476b51c6c1e6d11589",
-          "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/projects-BR6S1jHM.js",
+      "css": [],
+      "modules": [
         {
           "source": "harness/apps/web/src/museum/projects-lifecycle.tsx",
           "sha256": "7a7e54b16625aad186b795e78e6e21d0ed473b5f224bbd025f943b770f5f8e6f",
@@ -1093,86 +1212,54 @@
           "source": "harness/apps/web/src/museum/projects.tsx",
           "sha256": "36934f09d27e86cd8e69cf2c69830755b2763dcf5c54072e6c6e7fe33642ccbb",
           "owner": "harness/apps/web/src/museum"
-        },
+        }
+      ]
+    },
+    {
+      "file": "assets/museum-frame-D2qj4jzG.js",
+      "css": [],
+      "modules": [
         {
-          "source": "harness/apps/web/src/museum/intake.css",
-          "sha256": "c80bface60dcd57382c6d70c662e66e8ba68d7dd57ffaec39a47e3752a7ee333",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/intake.tsx",
-          "sha256": "ebf39e851b253aa10e2a8c4b9ccb98c80ddec9269755eb675984d2b1bfbef388",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/claude-studio.css",
-          "sha256": "918b0e2764f0e5d01e159596bd322f2b875c4917db2c8c87fc289f11d5949f4d",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/claude-studio.tsx",
-          "sha256": "eaffcbb1ce479bacf7864b19f80d9b422c3c987f175b1fd8e4f434e3c8ea3b43",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/assets/museum-logo.png",
-          "sha256": "30964b5f74619ad25982cef2c07c35427b8b7c79b442bc730bb60254bdc5d407",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/assets/museum-logo-dark.png",
-          "sha256": "7d2f7069e1223cfda97043effb9e3f4eedb5770957814155257d3a8dc5ac39b8",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/assets/museum-seal.png",
-          "sha256": "fd4a8ec46183cfb1ecb1855ec0462e5be2b1ab6d5c6352a0dee98ba0dbc5cd45",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/studio-shell.tsx",
-          "sha256": "d79a9273b4afc93c3df50ae2c1e67bd94279b2f7a7501c7ba156393ac3b12af7",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/workspace.tsx",
-          "sha256": "a8792ab59727be683443fb598c1a7dc983185020d50e703e0c7740339437d54d",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/apps/web/src/museum/bootstrap.ts",
-          "sha256": "6c00c7cef9470b295216c82c49855fbe43105874a4c9c27ac314ea465de2173e",
-          "owner": "harness/apps/web/src/museum"
-        },
-        {
-          "source": "harness/packages/client/web/src/window-drag/regions.ts",
-          "sha256": "55144a53a9ead129e15816acb564ea389c80a77ac6ba87f7e3b57144144cafdb",
-          "owner": "harness/packages/client/web"
-        },
-        {
-          "source": "harness/packages/client/web/src/window-drag/recall.ts",
-          "sha256": "392014d25beab1e9283ca63de2eda43650f86244f69b06b637b744c4fb2293d7",
-          "owner": "harness/packages/client/web"
-        },
-        {
-          "source": "harness/packages/client/web/src/base.css",
-          "sha256": "a02c91e1249fe0c69bcf39fdd98c3999329066e751d547332024672d773a4956",
-          "owner": "harness/packages/client/web"
-        },
-        {
-          "source": "harness/packages/client/web/src/boot.ts",
-          "sha256": "4dd433abccb6aae86669a90122f653475b01451e1b37472b3a4908abc9a84fe7",
-          "owner": "harness/packages/client/web"
-        },
-        {
-          "source": "harness/apps/web/src/museum/entry.ts",
-          "sha256": "bafacbc9d5556ef914dc65b941c9eb845a531d9aa89b588b19d5028108c758da",
+          "source": "harness/apps/web/src/museum/museum-frame.tsx",
+          "sha256": "302c7182c9d01f306324479dd93cad02f2c658e6da61d6dd2db71db5a97ad9e9",
           "owner": "harness/apps/web/src/museum"
         }
       ]
     },
     {
-      "file": "assets/admin-BXM_IAp-.js",
+      "file": "assets/tasks-detail-BOlKVMyN.js",
+      "css": [],
+      "modules": [
+        {
+          "source": "harness/apps/web/src/museum/write-dialog.tsx",
+          "sha256": "03a90f025a8103a4c0e9cd8b78fb794001dc8946ef0007132dbdbb201f12ad34",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/tasks-dispatch.tsx",
+          "sha256": "2bb500d85dabd52194d1e38e9e266f7431a52054ea88eb6c20562854d2eb8343",
+          "owner": "harness/apps/web/src/museum"
+        },
+        {
+          "source": "harness/apps/web/src/museum/tasks-detail.tsx",
+          "sha256": "6738e9470cf48e49f9912436bc6623fc3e828963bdf2ae068b8949876aa41458",
+          "owner": "harness/apps/web/src/museum"
+        }
+      ]
+    },
+    {
+      "file": "assets/intake-QThSMQ00.js",
+      "css": [],
+      "modules": [
+        {
+          "source": "harness/apps/web/src/museum/intake.tsx",
+          "sha256": "ebf39e851b253aa10e2a8c4b9ccb98c80ddec9269755eb675984d2b1bfbef388",
+          "owner": "harness/apps/web/src/museum"
+        }
+      ]
+    },
+    {
+      "file": "assets/admin-vN3gJH1z.js",
       "css": [
         "assets/admin-CqQ4DQc2.css"
       ],
@@ -1300,7 +1387,18 @@
       ]
     },
     {
-      "file": "assets/design-system-page-Dbwpiqx7.js",
+      "file": "assets/governance-widgets-BtPGP5gz.js",
+      "css": [],
+      "modules": [
+        {
+          "source": "harness/apps/web/src/museum/governance-widgets.tsx",
+          "sha256": "5ff0699132c4ed6fac1128a7b653de292a859e0c05d7e3195f0939f80298af0c",
+          "owner": "harness/apps/web/src/museum"
+        }
+      ]
+    },
+    {
+      "file": "assets/design-system-page-BXDpSAOG.js",
       "css": [],
       "modules": [
         {
@@ -1311,7 +1409,7 @@
       ]
     },
     {
-      "file": "assets/assistant-page-BqC9Pr61.js",
+      "file": "assets/assistant-page-jFKOYQ82.js",
       "css": [],
       "modules": [
         {
@@ -1322,7 +1420,7 @@
       ]
     },
     {
-      "file": "assets/file-preview-pdf--0gtaCE0.js",
+      "file": "assets/file-preview-pdf-D7rNFsCD.js",
       "css": [],
       "modules": [
         {
@@ -4193,20 +4291,20 @@
       "sha256": "2103fed28650ede096a2281104a1a8a4304dae0db414342c636867522307123b"
     },
     {
-      "file": "assets/GBK2K-H-Cv55KPk8.bcmap",
-      "source": "harness/node_modules/.pnpm/pdfjs-dist@6.3.289/node_modules/pdfjs-dist/cmaps/GBK2K-H.bcmap",
-      "provenance": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.3.289.tgz#package/cmaps/GBK2K-H.bcmap",
-      "review": null,
-      "pdfjsGroup": "cmap",
-      "sha256": "3d919ae72af16c5cc6846ec87a4326a9f125e493c59d3628429d35c2c95fe8c4"
-    },
-    {
       "file": "assets/GBKp-EUC-H-CElrnV5g.bcmap",
       "source": "harness/node_modules/.pnpm/pdfjs-dist@6.3.289/node_modules/pdfjs-dist/cmaps/GBKp-EUC-H.bcmap",
       "provenance": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.3.289.tgz#package/cmaps/GBKp-EUC-H.bcmap",
       "review": null,
       "pdfjsGroup": "cmap",
       "sha256": "d15ebd8e81fb4fe8a244f1b1e877922e03500ac69eddf5001093e502430451d2"
+    },
+    {
+      "file": "assets/GBK2K-H-Cv55KPk8.bcmap",
+      "source": "harness/node_modules/.pnpm/pdfjs-dist@6.3.289/node_modules/pdfjs-dist/cmaps/GBK2K-H.bcmap",
+      "provenance": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.3.289.tgz#package/cmaps/GBK2K-H.bcmap",
+      "review": null,
+      "pdfjsGroup": "cmap",
+      "sha256": "3d919ae72af16c5cc6846ec87a4326a9f125e493c59d3628429d35c2c95fe8c4"
     },
     {
       "file": "assets/GBT-EUC-H-BTsQIL1M.bcmap",
@@ -4773,8 +4871,8 @@
     "assets/Adobe-Korea1-UCS2-BEQZuOdo.bcmap": "857b723088be97255053562bfa41bd1075a7f7910d3bab59a0645c8bbc7060ff",
     "assets/ETHK-B5-H-1MLb5v9x.bcmap": "d2f10fa519336bc4efcc7b6deb9604b75429946b40d82e311cb3a97a1994c89a",
     "assets/GBK-EUC-H-CAORqCkf.bcmap": "2103fed28650ede096a2281104a1a8a4304dae0db414342c636867522307123b",
-    "assets/GBK2K-H-Cv55KPk8.bcmap": "3d919ae72af16c5cc6846ec87a4326a9f125e493c59d3628429d35c2c95fe8c4",
     "assets/GBKp-EUC-H-CElrnV5g.bcmap": "d15ebd8e81fb4fe8a244f1b1e877922e03500ac69eddf5001093e502430451d2",
+    "assets/GBK2K-H-Cv55KPk8.bcmap": "3d919ae72af16c5cc6846ec87a4326a9f125e493c59d3628429d35c2c95fe8c4",
     "assets/GBT-EUC-H-BTsQIL1M.bcmap": "dc5f44e48a39f3367ae28665027d8ab1d8cedb5a9dcc5068a900acd6709f60f9",
     "assets/GBT-H-DL9h-WkS.bcmap": "8afda745a505763f3ff54c8126eeb48ef376ea9ed07d9f42ff9a22c5c547ec57",
     "assets/GBTpc-EUC-H-DnIh5WJ3.bcmap": "7b23e2f7bfdb6c918f567b7324bf858f398bd8cd5f268d74ece19a3c91bf4f32",
@@ -4823,13 +4921,30 @@
     "assets/quickjs-eval-CRWuirmK.js": "fe7930418e869791ce892567dbd0bc4698152b7e550b5cefa553992c56ddc325",
     "assets/quickjs-eval-zJSp5SB4.wasm": "7bcacc9f22cacf7e9b23866d2a6d1639693d40c7f144e41b7c69ed37ba9cbe8f",
     "assets/pdf.worker.min-Dswkl-cV.mjs": "8ab0e5e30031b4a06ecfddd5ae9562f0227f830ee7ec9ed1a968b134243d2386",
-    "assets/museum-CtTtI93K.css": "ee5e31c4dd189733abcbeeb1422c9524d30b0b15639a340b7af1cc4ecddd8d92",
+    "assets/museum-hmUdjqKe.css": "7ec8a69a4492fae5badef447a802e52c15217f52fefb0bf14191ec4036de2a8c",
+    "assets/calendar-Db0mjlPZ.css": "0b0dafcd91020da2d8b62d99cb76c648a3d165f23762fc1d27339f2fbbdcf306",
     "assets/admin-CqQ4DQc2.css": "15fb337b0e30138951b705c39f4228e50e3ac8a0ac20db4afbbcb56bdd4a69c0",
-    "assets/museum-Ddsq7UjM.js": "a7c177657320b580e94344ffadfaea344968c0676629ea6724a63883ea5b0f90",
-    "assets/admin-BXM_IAp-.js": "2b0b9639966ab710bec042ff3120109892f6677e35a8355cb4f1e8bd471b2e72",
-    "assets/design-system-page-Dbwpiqx7.js": "3ed89316eda4bac91c5ff3dfe2b3d53213d94569fca60d5f6766fd12285c5fe8",
-    "assets/assistant-page-BqC9Pr61.js": "fc5048facc54640a566c1000df9cb0b94395cae5f7ced75aff86b4d50183c4d9",
-    "assets/file-preview-pdf--0gtaCE0.js": "412970ff4de6c870770057374fdfd8eee8d2cd5fc932c920c259bb0a2a395f56",
+    "assets/museum-BzuqjX4B.js": "f55944f9d29f264a229a663af163f6496e6434d12b5a62f85aea1ee86d2f65c4",
+    "assets/calendar-D5jzy3Jy.js": "20cb4eae283facc8f2f9a64b43007a145866c690d798161149cd4d6c48a34d4e",
+    "assets/files-DTozNEiO.js": "7324c72b3b32ed4bc4c768ec32ebfea5a29d1a7b3fe61dd83aed276c0c7bd42d",
+    "assets/contacts-BXCyo6SI.js": "35229ca2c65e3da2c97226279dca2c59a86489d8216d17c1a802097fba653f4c",
+    "assets/api-Te56Z5iG.js": "9e61f506057b042f6d9f644429c733c450c7eff6720f0f162bc883c5dc9295c5",
+    "assets/finance-D49L3j2A.js": "768c6149a069d4456c7367c6eebcfbbd14a0e3a6f8723268915695d03ee1a1fc",
+    "assets/wechat-_QfhiJaf.js": "8990f269f42e55365b15711da2f14b92e6c563fc704483378592a54fcfbb2e6f",
+    "assets/photos-IkChX2ia.js": "f90b74c7fcc7be59965540af49a7aad8fb2e9f469e5608480aeb7e8d42ac7ec6",
+    "assets/resource-tags-Hno68wOU.js": "4ba707010365817b1f89eeee2e5a9d347536414f7d575ba700adcbcb21d56e34",
+    "assets/tasks-DR6YOI8U.js": "577fb69871a2574c9e71a6fa45c0a3c25543f0dffc6d350177df90ccf66d17d0",
+    "assets/notices-CnXmOW8l.js": "eaada3f06beb427af29e14e1e97a0563121fb66ea70303fb3c611067a5a05f41",
+    "assets/account-BnZPMSwv.js": "3905d1b50a763931eb238271dd19a322f3f49bbb38401df934295bcb434af791",
+    "assets/projects-BR6S1jHM.js": "cad0b30744cbb05f0f670e8c37c2443a23a6d11f4b4c2a4ca4f2c88fad9729d6",
+    "assets/museum-frame-D2qj4jzG.js": "9abea0a07a4b68455143d0f8d966f015d2a31e55706c00adbaad90beaf2f4bea",
+    "assets/tasks-detail-BOlKVMyN.js": "b4daa82b55b77c17eacc5a3dad6fb8bdc1c48339591821be8ea94558a3a9ccc9",
+    "assets/intake-QThSMQ00.js": "e5ed3dc513a6a67aade602528735c11b458d9f133ab826061e8fdbf914114d5b",
+    "assets/admin-vN3gJH1z.js": "3b9c38f88a8377ed8079572effffeaa78ff55d764fa29b0236928f1c8b064de1",
+    "assets/governance-widgets-BtPGP5gz.js": "04cc619246364b8cb13ac36ed97d4df7ea4672afa76b65a3f555c4fc2f084718",
+    "assets/design-system-page-BXDpSAOG.js": "a29ea94e4fde0280e09817ab0c6044b48b13e8579105077af0b9317e293a9647",
+    "assets/assistant-page-jFKOYQ82.js": "35892d8eef6e95dc18996fe2fbc400d67a8c90d093dda5b1e1ad02d56a66aa67",
+    "assets/file-preview-pdf-D7rNFsCD.js": "a60ee8786b5d20f63c1a3a75ada2f1f73aead05e6da388ae5a0b5711335e25d6",
     "assets/78-EUC-H-C42bVnG-.js": "4288b0cb9be1e628e5a6e06e1b48300182f32158bb2829392d9d7b4bd2edd4fd",
     "assets/78-EUC-V-DrXQhmwI.js": "0f2371998a2ad924e10dcb5c3e52f5b15e9d94b0ead4434c5885beb94ef6437b",
     "assets/78-H-CMIl2hob.js": "5f24ee9f44d0c3e7d2f44178ac08fbf471d67c2638b6317031221ac101ec4dc4",
@@ -5027,8 +5142,8 @@
     "brand/floral/SOURCES.md": "e00e5841a434638c9a5448e92bb9414b478aeedc6a529f4ffb26962543f934a1",
     "manifest.webmanifest": "622875799d46e27f61cdfa4a79315e7f8fe72ab406f298188ba12d04456bc2c9",
     "licenses/harness-MIT.txt": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
-    "museum.html": "f4c1dc214ae589435f31a524fa5441cf48f20e3c4dc28351023f80fe3e94a5b3",
-    "index.html": "f4c1dc214ae589435f31a524fa5441cf48f20e3c4dc28351023f80fe3e94a5b3",
+    "museum.html": "c8df4365ce8e1a6dc9d2277fb742fc33ba3f6991fa1cadba7130f49d264785df",
+    "index.html": "c8df4365ce8e1a6dc9d2277fb742fc33ba3f6991fa1cadba7130f49d264785df",
     "licenses/texts/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
     "licenses/texts/aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2.txt": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2",
     "licenses/texts/b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7.txt": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7",

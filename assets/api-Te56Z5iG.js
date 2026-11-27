@@ -1,0 +1,1 @@
+let s=new AbortController;function o(e){const r=s,t=e?AbortSignal.any([e,r.signal]):r.signal;function n(){if(t.throwIfAborted(),r!==s)throw new DOMException("账号状态已变化。","AbortError")}return{signal:t,check:n,expire(){n(),window.dispatchEvent(new Event("museum:session-expired"))}}}class i extends Error{constructor(r,t){super(t),this.status=r}}export{i as A,o as r};
