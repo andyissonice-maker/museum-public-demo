@@ -39,10 +39,40 @@
   background: #f7f5fa;
   font: 16px/1.5 system-ui, sans-serif;
 }
+
+#root:not(:empty) + .museum-demo-loading {
+  display: none;
+}
 </style>
     <script data-assistant-url="https://museum-t-stream-jjqkxxwwrh.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}' data-document-sizes='{"10000000-0000-4000-8000-000000000061-preview.pdf":23145,"10000000-0000-4000-8000-000000000061-v1.docx":37784,"10000000-0000-4000-8000-000000000061-v2.docx":37803,"10000000-0000-4000-8000-000000000062-preview.pdf":29930,"10000000-0000-4000-8000-000000000062-v1.xlsx":6565,"10000000-0000-4000-8000-000000000062-v2.xlsx":6557,"10000000-0000-4000-8000-000000000063-preview.pdf":22718,"10000000-0000-4000-8000-000000000063-v1.docx":37657,"10000000-0000-4000-8000-000000000063-v2.docx":37691,"10000000-0000-4000-8000-000000000064-preview.pdf":23382,"10000000-0000-4000-8000-000000000064-v1.docx":37710,"10000000-0000-4000-8000-000000000065-v1.pdf":22969,"demo-file-1-preview.pdf":30061,"demo-file-1-v1.docx":37970,"demo-file-2-preview.pdf":29118,"demo-file-2-v1.xlsx":6491,"demo-file-3-v1.pdf":23274,"demo-file-4-v1.pdf":22141,"demo-file-5-preview.pdf":28717,"demo-file-5-v1.xlsx":6441,"demo-file-6-preview.pdf":24262,"demo-file-6-v1.docx":37800}'>(() => {
   const assistantUrl = document.currentScript?.dataset.assistantUrl;
   document.documentElement.dataset.museumPublicDemo = 'true';
+  function recoverAssetLoad() {
+    const url = new URL(location.href);
+    const lastRetry = Number(url.searchParams.get('_demo_reload'));
+    if (!navigator.onLine || Date.now() - lastRetry < 60_000) return false;
+    url.searchParams.set('_demo_reload', String(Date.now()));
+    location.replace(url.href);
+    return true;
+  }
+  window.addEventListener('vite:preloadError', recoverAssetLoad);
+  window.addEventListener('error', (event) => {
+    if (!(event.target instanceof HTMLScriptElement) ||
+        !event.target.matches('script[type="module"][src^="/assets/"]') ||
+        recoverAssetLoad()) return;
+    const loading = document.querySelector('.museum-demo-loading');
+    if (!loading) return;
+    loading.textContent = '工作台资源暂时无法载入。';
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.textContent = '重新加载';
+    retry.addEventListener('click', () => {
+      const url = new URL(location.href);
+      url.searchParams.set('_demo_reload', String(Date.now()));
+      location.replace(url.href);
+    });
+    loading.append(' ', retry);
+  }, true);
   const user = {
     id: 'public-demo-viewer', name: '演示访客', email: 'visitor@example.invalid', role: 'member', publicDemo: true,
     publicDemoAssistant: assistantUrl ? 'enabled' : 'unavailable',
@@ -420,9 +450,8 @@
     <link rel="stylesheet" crossorigin href="/assets/museum-CgwbLyJX.css">
   </head>
   <body>
-    <div id="root">
-      <p class="museum-demo-loading" role="status">正在打开馆务工作台…</p>
-    </div>
+    <div id="root"></div>
+    <p class="museum-demo-loading" role="status">正在打开馆务工作台…</p>
     <p id="museum-demo-label" role="status">公开演示 · 示例数据 · 只读</p>
   </body>
 </html>
