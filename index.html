@@ -40,12 +40,13 @@
   font: 16px/1.5 system-ui, sans-serif;
 }
 </style>
-    <script data-assistant-url="https://museum-ssistant-ybdmlpgloi.cn-hongkong.fcapp.run/chat">(() => {
+    <script data-assistant-url="https://museum-ssistant-ybdmlpgloi.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}'>(() => {
   const assistantUrl = document.currentScript?.dataset.assistantUrl;
+  document.documentElement.dataset.museumPublicDemo = 'true';
   const user = {
-    id: 'public-demo-viewer', name: '演示访客', role: 'member',
+    id: 'public-demo-viewer', name: '演示访客', email: 'visitor@example.invalid', role: 'member', publicDemo: true,
     publicDemoAssistant: assistantUrl ? 'enabled' : 'unavailable',
-    permissions: ['projects:view', 'tasks:view', 'calendar:view', 'documents:view', 'photos:view', 'contacts:view', 'ai:use'],
+    permissions: ['projects:view', 'tasks:view', 'calendar:view', 'documents:view', 'photos:view', 'photos:download', 'contacts:view', 'ai:use'],
   };
   const now = new Date();
   const instant = (days = 0, hour = 10) => {
@@ -97,6 +98,93 @@
     createdAt: instant(-2), updatedAt: instant(-1), uploadedByName: '演示馆员',
     canManage: false, category: { name: '演示资料' },
   }));
+  const photoAssets = [
+    ['celadon', 0, '青瓷莲瓣碗'],
+    ['indigo', 0, '靛蓝印花织物'],
+    ['gallery', 1, '开放日展厅陈列'],
+    ['porcelain', 1, '青花花卉纹盖罐'],
+    ['paper', 2, '纸本摄影工作台'],
+    ['archive', 2, '绫面档案盒'],
+  ];
+  const gallerySizes = JSON.parse(document.currentScript?.dataset.gallerySizes || '{}');
+  const albums = ['器物与织造', '开放日布展记录', '修护与摄影记录'].map((name, index) => ({
+    id: demoId(41 + index), projectId: projects[index].id, parentId: null, depth: 1, version: 1,
+    name, coverPhotoId: 'demo-gallery-' + photoAssets[index * 2][0],
+  }));
+  const photos = photoAssets.map(([slug, index, name], position) => {
+    const id = 'demo-gallery-' + slug;
+    return {
+      id, name: name + '.webp', projectId: projects[index].id, albumId: albums[index].id,
+      version: 1, size: gallerySizes[id], mediaType: 'image/webp',
+      uploadedByName: 'AI 生成 · 演示素材', createdAt: instant(-position - 1),
+    };
+  });
+  albums.forEach((album, index) => { projects[index].coverPhotoId = album.coverPhotoId; });
+
+  const folders = projects.map((item, index) => ({
+    id: demoId(51 + index), projectId: item.id, parentId: null, version: 1,
+    name: ['布展工作稿', '开放日导览资料', '纸本摄影档案'][index],
+    archivedAt: null, childCount: 0, fileCount: 1, path: [],
+  }));
+  documents.push(...folders.map((folder, index) => ({
+    id: demoId(61 + index), projectId: folder.projectId, folderId: folder.id,
+    name: ['借展交接记录.docx', '观众动线复核.xlsx', '纸本取景复核.docx'][index],
+    size: 18800 + index * 920, version: 2, contentRevision: 2,
+    createdAt: instant(-4), updatedAt: instant(-1), uploadedByName: '演示馆员',
+    canManage: false, category: { name: '演示资料' },
+  })));
+
+  const money = (cents) => (cents / 100).toFixed(2);
+  const claims = [
+    [0, '展签样张与校色打样', 38000, 'submitted', -2, '用于展签确认与实物校色。'],
+    [1, '开放日导览图印制', 126000, 'approved', -4, '导览图与现场指引卡，演示记录。'],
+    [2, '档案无酸纸补充', 26800, 'returned', -3, '补充档案整理所用无酸纸。'],
+    [2, '纸本摄影校色卡', 14500, 'draft', -1, '预约拍摄设备前登记的草稿。'],
+  ].map(([index, title, cents, status, offset, note], position) => ({
+    id: demoId(71 + position), ownerId: user.id, ownerName: user.name, projectId: projects[index].id,
+    projectName: projects[index].name, title, amountCents: cents, amount: money(cents),
+    occurredOn: day(offset), note, status, version: status === 'draft' ? 1 : 2,
+    canApprove: false, evidence: [],
+    events: [
+      ...(status !== 'draft' ? [{ actorId: user.id, kind: 'submit', at: instant(offset) }] : []),
+      ...(status === 'approved' || status === 'returned' ? [{
+        actorId: '演示财务', kind: status === 'approved' ? 'approve' : 'return', at: instant(offset + 1),
+        reason: status === 'returned' ? '请补充无酸纸规格和采购数量。' : '金额与申请事项已核对。',
+      }] : []),
+    ],
+  }));
+  const claimsForYear = (query) => claims.filter((row) =>
+    !query.get('year') || row.occurredOn.startsWith(query.get('year') + '-')
+  );
+  const claimSummary = (rows) => ({
+    submittedAmount: money(rows.filter(row => row.status !== 'draft').reduce((sum, row) => sum + row.amountCents, 0)),
+    approvedAmount: money(rows.filter(row => row.status === 'approved').reduce((sum, row) => sum + row.amountCents, 0)),
+    draftCount: rows.filter(row => row.status === 'draft').length,
+    returnedCount: rows.filter(row => row.status === 'returned').length,
+  });
+
+  const dispatch = [{
+    id: demoId(81), parentTaskId: tasks[0].id, batchId: demoId(83), dispatcherId: demoId(84),
+    recipientId: user.id, title: '核对纸本展签编号', body: '对照布展清单校验编号，记录不一致的展品。',
+    dueAt: instant(2), version: 1, progress: 'open', receipt: 'read', overdue: false,
+    readAt: instant(-1), completedAt: null,
+  }, {
+    id: demoId(82), parentTaskId: tasks[3].id, batchId: demoId(85), dispatcherId: demoId(84),
+    recipientId: user.id, title: '回收借展包装尺寸确认表', body: '整理借展机构提供的包装尺寸记录。',
+    dueAt: instant(-1), version: 2, progress: 'done', receipt: 'read', overdue: false,
+    readAt: instant(-3), completedAt: instant(-1),
+  }];
+  const taskRecord = (task) => ({
+    id: 'record-' + task.id, summary: '完成第一轮资料核对',
+    result: '已核对演示资料，待汇总复核意见。', occurredAt: instant(-1),
+    actorName: '演示馆员', contactName: '', channel: '馆内沟通', participants: '展务小组',
+    followUpOn: day(1), nextStep: '回读清单并更新对应项目资料。',
+  });
+  const intakeRows = [
+    { name: photos[0].name, type: '照片', destination: albums[0].name, status: '已归档', href: '#/photos?project=demo-exhibit&photo=' + photos[0].id },
+    { name: documents[5].name, type: '文档', destination: projects[2].name, status: '待复核', href: '#/documents?project=demo-paper&file=' + documents[5].id },
+    { name: photos[2].name, type: '照片', destination: albums[1].name, status: '待归位', href: '#/photos?project=demo-collection&photo=' + photos[2].id },
+  ];
   const contacts = [
     [projects[0], '陈闻舟', '演示借展机构', '展务联络', '借展清单、运输安排和交接时间。'],
     [projects[1], '林知夏', '演示公共教育组', '导览协调', '负责开放日讲解排班与观众集合安排。'],
@@ -186,7 +274,16 @@
         case '/calendar/projects': return json(query.has('cursor') ? [] : projects);
         case '/tasks': return json(scoped(tasks, query));
         case '/calendar': return json(scoped(calendar, query));
-        case '/documents': return json(scoped(documents, query));
+        case '/documents': return json(scoped(documents, query).filter((row) =>
+          query.has('folderId') ? row.folderId === query.get('folderId') : query.get('folder') !== 'none' || !row.folderId
+        ));
+        case '/folders': return json(query.get('archived') || query.has('parentId') ? [] : scoped(folders, query));
+        case '/photos': return json(scoped(photos, query));
+        case '/photos/albums': return json(scoped(albums, query));
+        case '/reimbursements': return json(claimsForYear(query).filter(row => !query.has('status') || row.status === query.get('status')));
+        case '/reimbursements/inbox': return json(claims.filter(row => row.status === 'submitted'));
+        case '/reimbursements/summary': return json(claimSummary(claimsForYear(query)));
+        case '/intake/demo-queue': return json(intakeRows);
         case '/contacts': {
           const search = query.get('search')?.trim().toLowerCase();
           if (query.get('archived') === 'true') return json([]);
@@ -199,10 +296,51 @@
         case '/conversations': return json({ items: [], nextCursor: null });
         case '/contacts/ai/status': return json({ available: false });
         case '/tags': return json({ tags });
-        case '/dispatch/inbox':
+        case '/dispatch/inbox': return json({
+          items: dispatch.filter(row => query.get('filter') === 'past' ? row.progress === 'done' : row.progress === 'open'), nextCursor: null,
+        });
         case '/dispatch/sent': return json({ items: [], nextCursor: null });
+        case '/dispatch/parents': return json({ items: tasks.map(task => ({ id: task.id, name: task.name, projectId: task.projectId })), nextCursor: null });
         case '/me/layout': return json({}, 404);
       }
+      const activity = path.match(/^\/governance\/activity\/(project|file|task|contact|photo)\/([^/]+)$/);
+      if (activity) {
+        const catalogs = { project: projects, file: documents, task: tasks, contact: contacts, photo: photos };
+        const item = catalogs[activity[1]].find(row => row.id === activity[2]);
+        return json(item ? [{
+          id: 'activity-' + item.id, action: 'create', label: '录入演示资料',
+          actorName: '演示馆员', createdAt: item.createdAt || instant(-4), detail: { name: item.name },
+        }] : []);
+      }
+      const mediaTags = path.match(/^\/(photos|contacts)\/([^/]+)\/tags$/);
+      if (mediaTags) {
+        const resource = (mediaTags[1] === 'photos' ? photos : contacts).find(row => row.id === mediaTags[2]);
+        const projectIndex = projects.findIndex(row => row.id === resource?.projectId);
+        return json({ version: 1, tags: projectIndex < 0 ? [] : [tags[projectIndex]] });
+      }
+      const matchingPhoto = photos.find(row => path === '/photos/' + row.id + '/download');
+      if (matchingPhoto) return original('/demo-assets/gallery/' + matchingPhoto.id + '.webp', { signal: init?.signal });
+      const folder = folders.find(row => path === '/folders/' + row.id);
+      if (folder) return json(folder);
+      const claim = claims.find(row => path === '/reimbursements/' + row.id);
+      if (claim) return json(claim);
+      const dispatchDetail = dispatch.find(row => path === '/dispatch/' + row.id);
+      if (dispatchDetail) return json(dispatchDetail);
+      const task = tasks.find(row => path === '/tasks/' + row.id + '/records');
+      if (task) return json([taskRecord(task)]);
+      const boardTask = tasks.find(row => path === '/tasks/' + row.id + '/board');
+      if (boardTask) return json(dispatch.filter(row => row.parentTaskId === boardTask.id).map(row => ({
+        id: row.id, recipientName: user.name, dueAt: row.dueAt, overdue: row.overdue, progress: row.progress,
+      })));
+      if (path === '/tasks/' + tasks[1].id + '/submissions') return json([{
+        id: demoId(91), round: 1, note: '已确认入口集合点与两条备选路线，等候展务组复核。',
+        status: 'submitted', reviewNote: '', submittedByName: '演示访客', submittedAt: instant(-1),
+      }]);
+      const revisions = documents.find(row => path === '/documents/' + row.id + '/revisions');
+      if (revisions) return json(Array.from({ length: revisions.version }, (_, index) => ({
+        id: revisions.id + '-v' + (index + 1), number: index + 1, name: revisions.name, size: revisions.size,
+        uploadedByName: '演示馆员', createdAt: index === 0 ? revisions.createdAt : revisions.updatedAt,
+      })).reverse());
       const projectPath = path.match(/^\/projects\/([^/]+)(\/tags)?$/);
       if (projectPath) {
         const index = projects.findIndex(row => row.id === projectPath[1]);
@@ -230,7 +368,7 @@
   }, true);
 })();
 </script>
-    <script type="module" crossorigin src="/assets/museum-ByUChH5J.js"></script>
+    <script type="module" crossorigin src="/assets/museum-BgvrBwao.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/museum-hmUdjqKe.css">
   </head>
   <body>
