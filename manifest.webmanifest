@@ -1,0 +1,18 @@
+{
+  "name": "上海艺术品博物馆 · 馆务工作台",
+  "short_name": "馆务工作台",
+  "description": "上海艺术品博物馆内部项目管理、文件协作、三层日历与财务审批工作台",
+  "start_url": "/#/home",
+  "display": "standalone",
+  "background_color": "#f7f5fa",
+  "theme_color": "#6d5696",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/brand/museum-seal-mark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
