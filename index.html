@@ -40,13 +40,13 @@
   font: 16px/1.5 system-ui, sans-serif;
 }
 </style>
-    <script data-assistant-url="https://museum-t-stream-jjqkxxwwrh.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}'>(() => {
+    <script data-assistant-url="https://museum-t-stream-jjqkxxwwrh.cn-hongkong.fcapp.run/chat" data-gallery-sizes='{"demo-gallery-archive":162874,"demo-gallery-celadon":80470,"demo-gallery-gallery":107116,"demo-gallery-indigo":139764,"demo-gallery-paper":110536,"demo-gallery-porcelain":83106}' data-document-sizes='{"10000000-0000-4000-8000-000000000061-preview.pdf":23145,"10000000-0000-4000-8000-000000000061-v1.docx":37784,"10000000-0000-4000-8000-000000000061-v2.docx":37803,"10000000-0000-4000-8000-000000000062-preview.pdf":29930,"10000000-0000-4000-8000-000000000062-v1.xlsx":6565,"10000000-0000-4000-8000-000000000062-v2.xlsx":6557,"10000000-0000-4000-8000-000000000063-preview.pdf":22718,"10000000-0000-4000-8000-000000000063-v1.docx":37657,"10000000-0000-4000-8000-000000000063-v2.docx":37691,"10000000-0000-4000-8000-000000000064-preview.pdf":23382,"10000000-0000-4000-8000-000000000064-v1.docx":37710,"10000000-0000-4000-8000-000000000065-v1.pdf":22969,"demo-file-1-preview.pdf":30061,"demo-file-1-v1.docx":37970,"demo-file-2-preview.pdf":29118,"demo-file-2-v1.xlsx":6491,"demo-file-3-v1.pdf":23274,"demo-file-4-v1.pdf":22141,"demo-file-5-preview.pdf":28717,"demo-file-5-v1.xlsx":6441,"demo-file-6-preview.pdf":24262,"demo-file-6-v1.docx":37800}'>(() => {
   const assistantUrl = document.currentScript?.dataset.assistantUrl;
   document.documentElement.dataset.museumPublicDemo = 'true';
   const user = {
     id: 'public-demo-viewer', name: '演示访客', email: 'visitor@example.invalid', role: 'member', publicDemo: true,
     publicDemoAssistant: assistantUrl ? 'enabled' : 'unavailable',
-    permissions: ['projects:view', 'tasks:view', 'calendar:view', 'documents:view', 'photos:view', 'photos:download', 'contacts:view', 'ai:use'],
+    permissions: ['projects:view', 'tasks:view', 'calendar:view', 'documents:view', 'documents:download', 'photos:view', 'photos:download', 'contacts:view', 'ai:use'],
   };
   const now = new Date();
   const instant = (days = 0, hour = 10) => {
@@ -87,20 +87,20 @@
     ownerName: '演示馆员', participants: [], remindMinutes: null, contactName: null,
   }));
   const documents = [
-    ['demo-file-1', projects[0].id, '展签校对稿.docx', 18472],
-    ['demo-file-2', projects[0].id, '借展物件清单.xlsx', 58030],
-    ['demo-file-3', projects[1].id, '馆藏开放日导览.pdf', 242016],
-    ['demo-file-4', null, '馆务工作说明.pdf', 55296],
-    ['demo-file-5', projects[2].id, '纸本摄影索引.xlsx', 35749],
-    ['demo-file-6', projects[2].id, '纸本状况登记表.docx', 20734],
-  ].map(([id, projectId, name, size]) => ({
-    id, projectId, name, size, folderId: null, version: 1, contentRevision: 1,
+    ['demo-file-1', projects[0].id, '展签校对稿.docx'],
+    ['demo-file-2', projects[0].id, '借展物件清单.xlsx'],
+    ['demo-file-3', projects[1].id, '馆藏开放日导览.pdf'],
+    ['demo-file-4', null, '馆务工作说明.pdf'],
+    ['demo-file-5', projects[2].id, '纸本摄影索引.xlsx'],
+    ['demo-file-6', projects[2].id, '纸本状况登记表.docx'],
+  ].map(([id, projectId, name]) => ({
+    id, projectId, name, folderId: null, version: 1, contentRevision: 1,
     createdAt: instant(-2), updatedAt: instant(-1), uploadedByName: '演示馆员',
     canManage: false, category: { name: '演示资料' },
   }));
   const legacyDocument = {
     id: demoId(65), projectId: null, folderId: null, name: '历届开放日接待流程（存档）.pdf',
-    version: 1, contentRevision: 1, size: 48320, createdAt: instant(-40), updatedAt: instant(-30),
+    version: 1, contentRevision: 1, createdAt: instant(-40), updatedAt: instant(-30),
     uploadedByName: '演示档案员', canManage: false, isLocked: true, lockedAt: instant(-30),
     category: { name: '历史档案' },
   };
@@ -136,7 +136,7 @@
   documents.push(...folders.map((folder, index) => ({
     id: demoId(61 + index), projectId: folder.projectId, folderId: folder.id,
     name: ['借展交接记录.docx', '观众动线复核.xlsx', '纸本取景复核.docx'][index],
-    size: 18800 + index * 920, version: 2, contentRevision: 2,
+    version: 2, contentRevision: 2,
     createdAt: instant(-4), updatedAt: instant(-1), uploadedByName: '演示馆员',
     canManage: false, category: { name: '演示资料' },
   })));
@@ -147,10 +147,22 @@
   };
   documents.push({
     id: demoId(64), projectId: projects[0].id, folderId: archivedFolder.id,
-    name: '首轮展签校对稿.docx', size: 19600, version: 1, contentRevision: 1,
+    name: '首轮展签校对稿.docx', version: 1, contentRevision: 1,
     createdAt: instant(-8), updatedAt: instant(-5), uploadedByName: '演示档案员',
     canManage: false, category: { name: '历史档案' },
   });
+  const documentSizes = JSON.parse(document.currentScript?.dataset.documentSizes || '{}');
+  const documentAsset = (name) => '/demo-assets/documents/' + name;
+  const documentVersion = (row, number) => {
+    const name = row.id + '-v' + number + row.name.slice(row.name.lastIndexOf('.'));
+    return { size: documentSizes[name], demoDownload: documentAsset(name) };
+  };
+  const allDocuments = [...documents, legacyDocument];
+  for (const row of allDocuments) {
+    Object.assign(row, documentVersion(row, row.contentRevision));
+    const preview = row.id + '-preview.pdf';
+    if (documentSizes[preview]) row.demoPreview = documentAsset(preview);
+  }
 
   const money = (cents) => (cents / 100).toFixed(2);
   const claims = [
@@ -362,9 +374,19 @@
         id: demoId(91), round: 1, note: '已确认入口集合点与两条备选路线，等候展务组复核。',
         status: 'submitted', reviewNote: '', submittedByName: '演示访客', submittedAt: instant(-1),
       }]);
-      const revisions = [...documents, legacyDocument].find(row => path === '/documents/' + row.id + '/revisions');
-      if (revisions) return json(Array.from({ length: revisions.version }, (_, index) => ({
-        id: revisions.id + '-v' + (index + 1), number: index + 1, name: revisions.name, size: revisions.size,
+      const document = allDocuments.find(row => path === '/documents/' + row.id + '/download');
+      if (document) {
+        const response = await original(document.demoDownload, { signal: init?.signal });
+        if (!response.ok) return response;
+        const headers = new Headers(response.headers);
+        headers.set('x-museum-file-version', String(document.version));
+        headers.set('content-length', String(document.size));
+        return new Response(response.body, { headers });
+      }
+      const revisions = allDocuments.find(row => path === '/documents/' + row.id + '/revisions');
+      if (revisions) return json(Array.from({ length: revisions.contentRevision }, (_, index) => ({
+        id: revisions.id + '-v' + (index + 1), number: index + 1, name: revisions.name,
+        ...documentVersion(revisions, index + 1),
         uploadedByName: '演示馆员', createdAt: index === 0 ? revisions.createdAt : revisions.updatedAt,
       })).reverse());
       const projectPath = path.match(/^\/projects\/([^/]+)(\/tags)?$/);
@@ -389,13 +411,13 @@
     if (url.origin !== location.origin && ['127.0.0.1', 'localhost'].includes(url.hostname) ||
         url.origin === location.origin && url.pathname.startsWith('/api/')) {
       event.preventDefault();
-      document.querySelector('#museum-demo-label').textContent = '演示版 · 文件编辑和下载未开放';
+      document.querySelector('#museum-demo-label').textContent = '演示版 · 此操作仅在正式工作台开放';
     }
   }, true);
 })();
 </script>
-    <script type="module" crossorigin src="/assets/museum-DS9e-erM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/museum-hmUdjqKe.css">
+    <script type="module" crossorigin src="/assets/museum-CbN3d7A5.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/museum-CgwbLyJX.css">
   </head>
   <body>
     <div id="root">
